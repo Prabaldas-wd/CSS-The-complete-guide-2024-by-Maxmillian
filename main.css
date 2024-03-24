@@ -8,9 +8,10 @@ body {
 }
 
 #product-overview {
-  background: #ff1b68;
+  background: url("freedom.jpg");
   width: 100%;
   height: 528px;
+  padding: 10px;
 }
 
 .section-title {
@@ -20,8 +21,95 @@ body {
 #product-overview h1 {
   color: white;
   font-family: "Anton", sans-serif;
+  margin-top: 0px;
 }
 
 /* h1 {
     font-family: sans-serif;
 } */
+
+.main-header {
+  width: 100%;
+  background-color: #2ddf5c;
+  padding: 8px 16px;
+}
+.main-header > div {
+  display: inline-block;
+  vertical-align: middle;
+}
+.main-header__brand {
+  color: #0e4f1f;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 22px;
+}
+.main-nav {
+  display: inline-block;
+  text-align: right;
+  width: calc(100% - 74px);
+  vertical-align: middle;
+}
+.main-nav__items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.main-nav__item {
+  display: inline-block;
+  margin: 0 16px;
+}
+
+.main-nav__item a {
+  text-decoration: none;
+  color: #0e4f1f;
+  font-weight: bold;
+  padding: 3px 0;
+}
+
+.main-nav__item a:hover,
+.main-nav__item a:active {
+  color: white;
+  border-bottom: 5px solid white;
+}
+
+.main-nav__item--cta a {
+  color: white;
+  background: #ff1b68;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.main-nav__item--cta a:hover,
+.main-nav__item--cta a:active {
+  color: #ff1b68;
+  background: white;
+  border: none;
+}
+
+/* display: none removes the element to which you apply it from the document flow. This means that the element is not visible and it also doesn't block its position.
+If you want to hide an element then you can use visibility : hidden. In this case it is not removed from the document flow.
+*/
+
+/* Block-level vs Inline elements */
+
+/*
+
+Block-level elements are rendered as a block and hence take up all the available horizontal space. You can set margin-top and margin-bottom and two block-level elements will render in two different lines.
+
+Some examples are: <div> , <section> , <article> , <nav>  but also <h1> , <h2>  etc and <p> .
+
+Inline elements on the other hand only take up the space they require to fit their content in. Hence two inline-elements will fit into the same line (as long as the combined content doesn't take up the entire space in which case a line break would be added).
+
+They also use the box-model you learned about but margin-top  and margin-bottom  have no effect on the element. padding-top  and padding-bottom  also have a different effect. They don't push the adjacent content away but they will do so with the element border. You can read more about that behavior in the following article: https://hacks.mozilla.org/2015/03/understanding-inline-box-model/
+
+Additionally, setting a width  or height  on an inline element also has no effect. The width and height is auto to take as much space as required by the content.
+
+Logically, this makes sense since you don't want your inline elements to destroy your multi-line text-layout. If you want to do so or need both block-level and inline behavior, you can set display: inline-block  to merge behaviors.
+
+Some example elements are: <a> , <span> , <img> 
+
+*/
+
+/* Pseudo Class & Pseudo Element */
+/* pseudo class define the style of a special state of an element */
+/* pseudo style define the style of a specific part of an element */
